@@ -3,7 +3,6 @@ import random
 word_list = ["aardvark", "baboon", "camel"]
 
 
-
 palavra_escolhida_pc = random.choice(word_list)
 palavra_escolhida = list(palavra_escolhida_pc)
 palavra_jogador_pc = "_"*len(palavra_escolhida)
