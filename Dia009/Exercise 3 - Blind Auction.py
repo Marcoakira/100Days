@@ -16,6 +16,7 @@ while proximo == "s":
     proximo = str(input("Mais alguem vai apostar? S ou N")).lower()
     lance = {"nome": nome, "aposta": aposta}
     lances.append(lance)
+    #clear()
 
 #lances = [{'nome': 'batata', 'aposta': 152}, {'nome': 'joaquim', 'aposta': 23}, {'nome': 'rafaelo', 'aposta': 26}, {'nome': 'ranito', 'aposta': 30}]
 maior_aposta = {'nome': 'null', 'aposta': 0}
