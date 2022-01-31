@@ -20,6 +20,8 @@ def is_leap(year):
 
 #Jeito 2
 def days_in_month(ano,mes):
+    """Essa é uma Função que Verifica se o Ano é bi-cesto, e quantos
+    Dias tem o mês"""
     month_days = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
     is_leap(ano)
     if is_leap(ano):
