@@ -75,13 +75,7 @@ base_atual_game.pop(randomico)
 
 #se fosse uma lista
 #rapaz = primeiro_item.insert(0,base_atual_game.pop(base_atual_game[randomico]))
-'''
-segundo_item = []
 
-print(primeiro_item)
-print(primeiro_item["name"])
-print(base_atual_game)
-'''
 #4 escolher segundo dado. de maneira randomica e apaga ele da lista
 
 #print(primeiro)
