@@ -1,4 +1,4 @@
-#Function with Outputs
+# Function with Outputs
 
 # def format_name():
 #     f_name = input("your firt name? ").capitalize()
@@ -15,8 +15,10 @@ def format_name(f_name, l_name):
     formated_l_name = l_name.title()
     print(f"{formated_f_name} {formated_l_name}")
     return (formated_f_name + " " + formated_l_name)
+
+
 # um mode de fazer
-batat = format_name(f_name="AmandaA",l_name="FabiolA")
+batat = format_name(f_name="AmandaA", l_name="FabiolA")
 print(batat)
 # Outro Modo de fazer
-print(format_name(input("Qual seu primeiro nome? "),input("Qual seu Segundo Nome? ")))
+print(format_name(input("Qual seu primeiro nome? "), input("Qual seu Segundo Nome? ")))

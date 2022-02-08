@@ -4,32 +4,37 @@ print(logo)
 
 print("\n\n")
 
-#add
-def add(n1,n2):
-    return n1+n2
 
-#subtract
-def sub(n1,n2):
+# add
+def add(n1, n2):
+    return n1 + n2
+
+
+# subtract
+def sub(n1, n2):
     return n1 - n2
 
-#multiply
-def mul(n1,n2):
-    return n1*n2
 
-#Divide
-def div(n1,n2):
-    return n1 /n2
+# multiply
+def mul(n1, n2):
+    return n1 * n2
+
+
+# Divide
+def div(n1, n2):
+    return n1 / n2
 
 
 operations = {
-    "+":add,
-    "-":sub,
-    "*":mul,
-    "/":div
+    "+": add,
+    "-": sub,
+    "*": mul,
+    "/": div
 }
 
+
 def calculadora():
-#""" esse programa é uma calculadora que calcula os calculos calculentos"""
+    # """ esse programa é uma calculadora que calcula os calculos calculentos"""
 
     num1 = float(input("fist number: \n"))
     operation_symbol = input("Qual o simbulo?")
@@ -39,7 +44,7 @@ def calculadora():
         print(k)
 
     caculation_function = operations[operation_symbol]
-    first_answer = caculation_function(num1,num2)
+    first_answer = caculation_function(num1, num2)
     print(f"{num1} {operation_symbol} {num2} = {first_answer}")
 
     fim = input("deseja continuar?")
@@ -55,8 +60,9 @@ def calculadora():
     sair = input(" deseja sair? S/N")
     if sair != "n":
         calculadora()
-calculadora()
 
+
+calculadora()
 
 # operation_symbol = input("Qual o simbulo? ")
 # num3 = int(input("Qual novo valor? : \n"))

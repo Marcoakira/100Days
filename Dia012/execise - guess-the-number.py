@@ -11,9 +11,9 @@ NU_MAGICO = int(random.randint(0, 100))
 print(NU_MAGICO)
 tentativas = 0
 # Permitir que o jogador envie um palpite para um número entre 1 e 100.
-print("@"*50)
+print("@" * 50)
 print("TENTE ADVINHAR O NUMERO QUE ESTOU PENSANDO")
-print("@"*50)
+print("@" * 50)
 level = input("Qual o nivel de Dificuldade 'facil' ou 'Dificil' ? \n").lower()
 if "dificil" in level:
     tentativas += 10
@@ -35,7 +35,6 @@ while tentativas > 0:
     else:
         print("Muito baixo")
     tentativas -= 1
-
 
 if tentativas == 0:
     print(f"Infelismente acabaram as tentativas, você perdeu! o numero era {NU_MAGICO}")
