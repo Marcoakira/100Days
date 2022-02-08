@@ -33,7 +33,7 @@ print(logo)
 print("\nSEJA BEM VINDO AO MEGA JOGO HIGHER LOWER\n Escolha qual tem mais seguidores\n\n")
 #3 escolher primeiro dado de maneira randomica apaga ele da lista
 def quem_ganhou():
-    if primeiro_item['follower_count'] > segundo_item['follower_count']:
+    if primeiro_item_top['follower_count'] > segundo_item['follower_count']:
         certo = 'a'
     else:
         certo = 'b'
@@ -41,10 +41,10 @@ def quem_ganhou():
 
 acertou = True
 pontos = 0
-primeiro_item = a_opcao()
+primeiro_item_top = a_opcao()
 while len(base_atual_game) > 0 and acertou == True:
     segundo_item = a_opcao()
-    print(f"Compare A: {primeiro_item['name']}, a {primeiro_item['description']}, from {primeiro_item['country']}")
+    print(f"Compare A: {primeiro_item_top['name']}, a {primeiro_item_top['description']}, from {primeiro_item_top['country']}")
     print(vs)
     print(f"Against B: {segundo_item['name']}, a {segundo_item['description']}, from {segundo_item['country']}\n")
 
@@ -56,7 +56,7 @@ while len(base_atual_game) > 0 and acertou == True:
         pontos += 1
         print(f"Parabens voce acertou a resposta certa é a {escolha.upper()} "
               f"\nesta com {pontos} pontos, faltam {len(base_atual_game)} para voce zerar o game.")
-        primeiro_item = segundo_item
+        primeiro_item_top = segundo_item
     else:
         print(f"Nao foi dessa vez :( , a resposta certa era {ganho}, Voce fez {pontos} pontos.\n Volte sempre.")
         acertou = False
