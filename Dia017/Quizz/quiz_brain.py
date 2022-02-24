@@ -23,4 +23,9 @@ class QuizBrain:
         else:
             print(f"Voce Errou\nA resposta certa é {correct_answer}.")
 
-        print(f"voce acertou {self.score}/{len(self.question_list)}, ")
+        print(f"voce acertou {self.score}/{self.question_number}, ")
+        print("\n")
+
+    def acabou(self):
+        print("ACABOUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU")
+        print(f"voce acertou {self.score}/{self.question_number}, ")
