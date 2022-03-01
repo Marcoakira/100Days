@@ -45,11 +45,6 @@ while game_is_on:
         all_cobras[seg_num].goto(new_x, new_y)
 
     all_cobras[0].forward(20)
-    # all_cobras[0].right(90)
-
-# for snake in all_cobras:
-#     snake.left(90)
-#     snake.forward(20)
 
 
 screen.exitonclick()
