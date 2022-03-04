@@ -23,12 +23,26 @@ class Snake:
 
     def create_snake(self):
         # Create snakes
-        for snake_index in STARTING_POSITIONS:
-            new_snake = Turtle("square")
-            new_snake.color("white")
-            new_snake.penup()
-            new_snake.goto(snake_index)
-            self.all_cobras.append(new_snake)
+        for position in STARTING_POSITIONS:
+            self.add_segment(position)
+
+
+
+
+    def add_segment(self, position):
+        new_snake = Turtle("square")
+        new_snake.color("white")
+        new_snake.penup()
+        new_snake.goto(position)
+        self.all_cobras.append(new_snake)
+        # add a new segment to the snake
+
+
+    def extend(self):
+        #add a new segment to the snake
+        new_segment = self.all_cobras[-1].position()
+        self.add_segment(new_segment)
+
 
     def move(self):
 
