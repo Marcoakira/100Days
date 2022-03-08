@@ -2,6 +2,9 @@
 
 from turtle import Screen
 from paddle import Paddle
+from ball import Ball
+from time import sleep
+from scoreboard import Scoreboard
 
 # TODO: create the screen
 
@@ -10,9 +13,12 @@ screen.tracer(0)
 screen.setup(width=800, height=600)
 screen.bgcolor('black')
 screen.title('Pong Game')
+scoreboard = Scoreboard()
 
 paddle1 = Paddle(-350,0)
 paddle2 = Paddle(350,0)
+
+ball = Ball()
 
 # movimentação do paddle
 screen.listen()
@@ -26,9 +32,37 @@ screen.onkey(paddle2.paddle_down, 'Down')
 
 # TODO: create and move a paddle
 
+
+time_sleep = 0.1
 game_is_running = True
 while game_is_running:
+    sleep(time_sleep)
     screen.update()
+    ball.move()
+    # destecta colisão com a borda
+    if ball.ycor() > 280 or ball.ycor() < -280:
+        ball.bounce_v()
+    # detecta colisão com os paddles
+    if ball.distance(paddle2) < 50 and ball.xcor() > 320 or ball.distance(paddle1) < 50 and ball.xcor() < -320:
+        print('made contact')
+        ball.bounce_h()
+
+    # detecta ponto direita
+    if ball.xcor() > 400:
+        ball.reset_position()
+        scoreboard.update_score_r()
+        print('ponto direita')
+        time_sleep -= 0.001
+    # detecta ponto esquerda
+    if ball.xcor() < -400:
+        ball.reset_position()
+        scoreboard.update_score_l()
+        print('ponto esquerda')
+        time_sleep -= 0.001
+
+
+
+
 
 
 # TODO: Crate anothe paddle
