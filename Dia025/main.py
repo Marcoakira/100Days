@@ -1,4 +1,4 @@
-# TODO: create one CSV squirrel_count.csv file with Series about colors and count of squirrels
+#  create one CSV squirrel_count.csv file with Series about colors and count of squirrels
 
 import pandas as pd
 
@@ -18,12 +18,22 @@ squirrel_collors_count.to_csv('squirrel_count.csv')
 
 
 
-# import pandas as pd
-#
-# data = pd.read_csv('weather_data.csv')
-# # print(type(data))
-# # print(data[::-1])
-# # print(type(data['temp']))
+import pandas as pd
+
+data = pd.read_csv('weather_data.csv')
+for row in data.day:
+    if row == 'Sunday':
+        print(row)
+        print(data.loc[data.day == row])
+        print('\n')
+# if 'Saturday' in data.day[5]:
+#     print('Yes')
+# else:
+#     print('No')
+
+# print(type(data))
+# print(data[::-1])
+# print(type(data['temp']))
 #
 # data.to_dict()
 #
@@ -42,7 +52,7 @@ squirrel_collors_count.to_csv('squirrel_count.csv')
 #
 # # print(f"the max value is {data['temp'].max()}")
 #
-# # print(data[data.day == 'Saturday'])
+# print(data[data.day == 'Saturday'])
 # #
 # # print(data[data['temp'] == data.temp.max()])
 # #
